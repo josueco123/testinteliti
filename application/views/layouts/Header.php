@@ -35,7 +35,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">    
       <li>
-        <a href="<?= base_url("medicalhistory") ?>" class="nav-link text-white item-1" aria-current="page">
+        <a href="<?= base_url("medicalHistory") ?>" class="nav-link text-white item-1" aria-current="page">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
           Historias Medicas
         </a>

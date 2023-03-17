@@ -6,7 +6,7 @@ class MedicalHistory extends CI_Controller {
     public function __construct()
   	{
       parent::__construct();
-	  $this->load->model('MedicalHistory_Model');
+	  $this->load->model('MedicalHistory_model');
       $this->load->library(array('session','form_validation'));
       $this->load->helper('url');
       
@@ -17,13 +17,13 @@ class MedicalHistory extends CI_Controller {
 
     private function loadMedicalHistoryView($viewName, $data = null)
     {
-        $this->load->view('layouts/header');
+        $this->load->view('layouts/Header');
         if($data != null)
             $this->load->view($viewName, $data);
         else
             $this->load->view($viewName);
 
-        $this->load->view('layouts/footer');
+        $this->load->view('layouts/Footer');
     }
 
     public function index(){
@@ -46,7 +46,7 @@ class MedicalHistory extends CI_Controller {
 			'weight' => $this->input->post('weight')
 		);
 
-            $response = $this->MedicalHistory_Model->createMedicalHistory($history);
+            $response = $this->MedicalHistory_model->createMedicalHistory($history);
 
             if($response > 0)
                 $this->session->set_flashdata("success","Historia Médica agreado correctamente."); 
@@ -59,13 +59,13 @@ class MedicalHistory extends CI_Controller {
 
     public function getHistories()
     { 
-        $medicalHistories = $this->MedicalHistory_Model->getMedicalHistories();
+        $medicalHistories = $this->MedicalHistory_model->getMedicalHistories();
         echo json_encode($medicalHistories);
     }
 
     public function deleteHistory($idHistory)
     {
-        $response = $this->MedicalHistory_Model->deleteMedicalHistory($idHistory);
+        $response = $this->MedicalHistory_model->deleteMedicalHistory($idHistory);
 
 		if ($response > 0)
 			echo json_encode(array("status_code" => 200, "mensaje" => "Historia Médica elimindo con exito"));
@@ -113,7 +113,7 @@ class MedicalHistory extends CI_Controller {
 
     public function showMedicalHistory($idHistory)
     {
-        $medicalHistory = $this->MedicalHistory_Model->getMedicalHistoryById($idHistory)[0];
+        $medicalHistory = $this->MedicalHistory_model->getMedicalHistoryById($idHistory)[0];
         $age = $this->calculateAge($medicalHistory->birthday);
 
         if($age < 18)

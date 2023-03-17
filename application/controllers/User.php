@@ -8,7 +8,7 @@ class User extends CI_Controller {
       parent::__construct();
 	  $this->load->library(array('session','form_validation'));	
 	  $this->load->helper(array('url','form'));
-	  $this->load->model('User_Model');
+	  $this->load->model('User_model');
 	  $this->load->database('default');  
   	}
 	
@@ -21,17 +21,17 @@ class User extends CI_Controller {
 	public function index()
 	{
 		if($this->session->userdata('isLogged')){
-			$url = base_url().'medicalhistory';
+			$url = base_url().'medicalHistory';
 			redirect($url);
 		}else {
-			$this->loadUserViews('LoginVieW');
+			$this->loadUserViews('LoginView');
 		}
 		
 	}
 
     public function register()
     {
-		$this->loadUserViews('RegisterVieW');
+		$this->loadUserViews('RegisterView');
     }
 
 	public function createUser()
@@ -55,7 +55,7 @@ class User extends CI_Controller {
 				'password' => sha1($this->input->post('password'))
 			);
 	
-			$response = $this->User_Model->createUser($newUser);
+			$response = $this->User_model->createUser($newUser);
 	
 			if($response > 0){
 	
@@ -69,7 +69,7 @@ class User extends CI_Controller {
 
 	public function loginUser()
 	{
-		$user = $this->User_Model->getUserByEmail($this->input->post('email'))[0];
+		$user = $this->User_model->getUserByEmail($this->input->post('email'))[0];
 		$password = $this->input->post('password');
 		if($user->password == sha1($password)){
 			$this->setSession($user->user_id, $this->input->post('email'));

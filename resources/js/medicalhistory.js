@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     $("body").on("click", ".evt-add-pacient", function () {  
     
-        const urlResponse = window.location.href + "/createhistory"         
+        const urlResponse = window.location.href + "/createHistory"         
         $(location).attr("href", urlResponse);
     
       });
@@ -20,7 +20,7 @@ $(document).ready(function () {
       pageLength: 5,
       bLengthChange: false,
       ajax: {
-        "url": "medicalhistory/gethistories",
+        "url": "medicalhistory/getHistories",
         "dataSrc": ""
         },
         "columns":[          
@@ -42,7 +42,7 @@ $(document).ready(function () {
       
       const data = table.row( $(this).parents('tr') ).data();
 
-      const urlDelete = window.location.href + "/deletehistory/" + data["history_id"];
+      const urlDelete = window.location.href + "/deleteHistory/" + data["history_id"];
       
       swalWithBootstrapButtons.fire({
         title: "Eliminar Historia Médica",
@@ -65,7 +65,7 @@ $(document).ready(function () {
           })
             .done(function (resp) {
               if (resp.status_code == 200) {
-               table.ajax.url(window.location.href +'/gethistories').load();
+               table.ajax.url(window.location.href +'/getHistories').load();
                swalWithBootstrapButtons.fire(
                  '!Éxito!',
                  resp.mensaje,

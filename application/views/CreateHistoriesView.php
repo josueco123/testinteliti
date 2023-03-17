@@ -34,7 +34,7 @@
                        
 
                         <div class="col-12">
-                            <button class="btn btn-primary " type="submit" data-url-save="<?= base_url("medicalhistory/saveHistory"); ?>" data-url-redirect="<?= base_url("medicalhistory"); ?>">Guardar</button>
+                            <button class="btn btn-primary " type="submit" data-url-save="<?= base_url("medicalHistory/saveHistory"); ?>" data-url-redirect="<?= base_url("medicalHistory"); ?>">Guardar</button>
                         </div>
                     </form>
 				</div>
