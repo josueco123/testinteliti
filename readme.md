@@ -1,26 +1,23 @@
 
-###################
-Reto Inteliti
-###################
+## Reto Inteliti
 
 Este aplicativo permite crear usuarios para que estos puedan ingresar al sistema y registrar los datos de una historia
 médica de un paciente generando una breve recomendación de salud
 
-*******************
-Tecnologías
-*******************
+
+# Tecnologías
+**************************
 - Codeigneter v.3 (php),
 - JavaScript (jquery v1.9.1)
 
-**************************
-Requisitos de Instalación 
+
+# Requisitos de Instalación 
 **************************
 - Servidor con PHP version 5.6 or superior.
 - Gestor de base de datos MySQL
 
 
-**************************
-Instalación 
+# Instalación 
 **************************
 - Crear una base de datos con MySQL e importar el sql provisto
 - Clonar el repositorio dentro de la carpeta principal del servidor
@@ -48,8 +45,7 @@ y llenar las variables con sus valores correspondientes como se muestra en el ej
     ?>
     ```
 
-**************************
-Contacto
+# Contacto
 **************************
 - Author - Josue Hurtado
 - LinkeedIn - [link](https://www.linkedin.com/in/josueco/)
