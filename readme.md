@@ -11,7 +11,7 @@ médica de un paciente generando una breve recomendación de salud
 - JavaScript (jquery v1.9.1)
 
 
-# Requisitos de Instalación 
+## Requisitos de Instalación 
 
 - Servidor con PHP version 5.6 or superior.
 - Gestor de base de datos MySQL
