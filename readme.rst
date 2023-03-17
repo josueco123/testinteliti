@@ -1,20 +1,21 @@
 
-************
+###################
 Reto Inteliti
-************
+###################
+
 Este aplicativo permite crear usuarios para que estos puedan ingresar al sistema y registrar los datos de una historia
 médica de un paciente generando una breve recomendación de salud
 
-*******************
+**************************
 Requisitos de Instalación 
-*******************
+**************************
 
 - Servidor con PHP version 5.6 or superior.
 - Gestor de base de datos MySQL
 
 
 ************
-Installation
+Instalación
 ************
 
 - Crear una base de datos con MySQL e importar el sql provisto
@@ -45,16 +46,9 @@ y llenar las variables con sus valores correspondientes como se muestra en el ej
     ```
 
 
-***************
+*********
 Contacto
-***************
+*********
 
 - Author - Josue Hurtado
 - LinkeedIn - [link](https://www.linkedin.com/in/josueco/)
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
